@@ -1,0 +1,90 @@
+POST http://localhost:3001/api/services
+Content-Type: application/json
+
+  {
+    "name": "Decoração",
+    "description": "Escolha a decoração para sua festa, e nós a montamos.",
+    "price": 1400,
+    "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+  }
+
+###
+GET http://localhost:3001/api/services
+
+###
+GET http://localhost:3001/api/services/650aafec91f312bb8b05d3e9
+
+###
+DELETE http://localhost:3001/api/services/6508956f891b3b12ee401c25
+
+###
+PUT http://localhost:3001/api/services/650aafec91f312bb8b05d3e9
+Content-Type: application/json
+
+{
+    "name": "Segurança",
+    "description": "Esquema de segurança completo para a sua festa.",
+    "price": 2500,
+    "image": "https://media.istockphoto.com/id/1360493212/pt/foto/security-guard-at-live-festivale-event.jpg?s=170667a&w=0&k=20&c=_PbNOakKIHDQ10sdQgiAodlhgFX2EdxW3S5t6nRXeNY="
+}
+
+###
+POST http://localhost:3001/api/parties
+Content-Type: application/json
+
+{
+    "title": "Título da Festa 3",
+    "author": "Victor",
+    "description": "Descrição da festa",
+    "budget": 2500,
+    "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "services": [
+        {
+            "name": "Garçon",
+            "description": "Servir o povo",
+            "price": 80,
+            "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "name": "Bolo",
+            "description": "Bolo falso",
+            "price": 50,
+            "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+    ]
+}
+
+###
+GET http://localhost:3001/api/parties
+
+###
+GET http://localhost:3001/api/parties/6509b30573850a5e7f0a17f0
+
+###
+DELETE http://localhost:3001/api/parties/6509b41e73850a5e7f0a17f4
+
+###
+PUT http://localhost:3001/api/parties/6509b43773850a5e7f0a17f8
+Content-Type: application/json
+
+{
+    "title": "Título da Festa",
+    "author": "Victor",
+    "description": "Descrição da festa alterada",
+    "budget": 3500,
+    "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "services": [
+        {
+            "name": "Garçon Alterado",
+            "description": "Servir o povo",
+            "price": 80,
+            "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "name": "Bolo",
+            "description": "Bolo falso",
+            "price": 50,
+            "image": "https://images.pexels.com/photos/17152223/pexels-photo-17152223/free-photo-of-reino-unido-arquitetura-borrao-mancha.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+    ]
+}
